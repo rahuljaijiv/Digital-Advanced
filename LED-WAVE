@@ -1,1 +1,21 @@
-void setup{
+void setup()
+{
+pinMode(13, OUTPUT);
+pinMode(9, OUTPUT);
+pinMode(10, INPUT);
+}       
+
+void loop()
+{
+  if ( digitalRead(10) == HIGH)
+  {
+    digitalWrite(13, HIGH);
+    delay(50);
+    digitalWrite(9, HIGH);
+    delay(3);
+    digitalWrite(13, LOW);
+    digitalWrite(9, LOW);
+    
+  }
+  delay(1);             
+}
